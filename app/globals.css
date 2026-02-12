@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #FBF9F6;
+  --bg-secondary: #F5F2ED;
+  --bg-card: #FFFFFF;
+
+  --brand-primary: #E8D5C4;
+  --brand-secondary: #C9A88A;
+  --brand-dark: #A08060;
+
+  --text-primary: #2E2929;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Instrument Serif", "思源宋体", "Noto Serif SC", serif;
+}
+
+/* 页面淡入动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* 上滑进入动画 */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+/* 呼吸动画 */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.animate-breathe {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+/* 脉冲动画 */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* 弹跳动画 */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+/* 渐变背景动画 */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+/* Agent 颜色变量 */
+.border-agent-psychology { border-color: #B8A8D6; }
+.border-agent-aesthetic { border-color: #E8B8C8; }
+.border-agent-compliance { border-color: #A8C5A0; }
+.border-agent-communication { border-color: #8AAED6; }
+.border-agent-negotiation { border-color: #E8B86D; }
+.border-agent-transaction { border-color: #C9A88A; }
+
+/* 成功、警告、错误颜色 */
+.text-success { color: #A8C5A0; }
+.text-warning { color: #E8B86D; }
+.text-error { color: #D97B7B; }
+.text-info { color: #8AAED6; }
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
